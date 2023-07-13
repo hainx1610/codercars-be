@@ -21,6 +21,11 @@ mongoose.connect(process.env.MONGO_URI, () => {
   console.log("Connected to Database!");
 });
 
+// mongoose
+//   .connect(process.env.MONGO_URI)
+//   .then(() => console.log(`Connected to Database ${process.env.MONGO_URI}`))
+//   .catch((err) => console.log(err, "Error"));
+
 app.use("/", indexRouter);
 
 module.exports = app;
